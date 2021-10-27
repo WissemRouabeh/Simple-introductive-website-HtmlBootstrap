@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Développement Android [Wissem Rouabeh]</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+	
+	$(function(){
+		var i = 0;
+		$("#sh").hide();
+		$("#submit").hide();
+		$("#nv").change(function() {
+				if($(this).is(":checked")) {
+					$("#sh").show();
+					i=0
+				}else{
+					$("#sh").hide();
+					i=1;
+				}
+		});
+		function isValidEmailAddress(mail) {
+    		var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+    		return pattern.test(mail);
+		};
+		$("#mail").focusout(function(){
+			if(!isValidEmailAddress($("#mail").val())){
+			alert("Le format d'email est incorrecte!"); 
+			$("#submit").hide();
+		}else{
+			$("#submit").show();
+		}
+		});
+		
+		$("#submit").click(function(){ 
+			if ($("#nv").prop("checked")){
+				if($("#chk").prop("checked")||$("#chk1").prop("checked")||$("#chk2").prop("checked")){
+					
+				}else{
+					$(".rslt").addClass("error");
+
+					$(".rslt").html("<p>Vous devez choisir au moins un interet si vous etes interessés au newsletter !</p>");
+					}
+		} else if($("#msg").val()!=""){
+			if($("#nom").val()==""){
+				$(".rslt").addClass("error");
+				$(".rslt").html("<p>Vous devez remplir le champs nom et prenom si vous voulez envoyer un message ! !</p>");
+			}
+		}else{
+			$(".rslt").addClass("cl");
+			$(".rslt").html("<p>Succes !</p>");
+		}
+		});
+	});
+</script>
+	<style>
+	.cl{
+	color:green;
+	}
+	.error{
+	color:red;
+	}
+	</style>
+</head>
+<body data-spy="scroll" data-target="#my-navbar" data-offset="50">
+	 <nav class="navbar navbar-inverse navbar-fixed-top " id="my-navbar">
+      <div class="container-fluid">
+  <div class="navbar-header">
+        	<button class="navbar-toggle" data-toggle="collapse" data-target="#my-menu">
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	</button>
+        	<a class="navbar-brand" href=""> 
+        	<img class="img-circle" src="img/mans.png"> 
+        </a>
+
+        </div>
+        <div class="navbar-collapse collapse" id="my-menu">
+          <ul class="nav navbar-nav" id="my-navbar">
+            <li class="active"> <a class="js-scrollTo" href="#intro">Introduction</a> </li> 
+            <li> <a class="js-scrollTo" href="#parcours">Codage</a> </li> 
+            <li> <a class="js-scrollTo" href="#experience">Interfacage</a> </li> 
+            <li> <a class="js-scrollTo" href="#competences">Outils nécessaire</a> </li> 
+            <li> <a class="js-scrollTo" href="#album">Autre</a> </li> 
+            <li> <a class="js-scrollTo" href="#contact">A propos</a> </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <div class="jumbotron " id="intro">
+    	<div class="container text-center " >
+			<h1 class="text-center first-title">Android par où commencer ?</h1>
+			<div class="row">
+				<div class="col-md-6"></div>
+				<div class="col-md-6">
+					<p>Le roi incontestable des applications mobiles</p>
+				</div>
+			</div>
+    		<div class="btn-group">
+    			<button class="btn btn-large btn-primary js-scrollTo " href="#parcours">COMMENSER </button>
+    		</div>		
+
+		</div>
+	</div>
+	
+    	<div class="container" id="parcours">
+    		<section>
+    		<div class="page-header" >
+    			<h2>Codage <small> language de programmation?</small></h2>
+    		</div>
+    		<div class="row">
+				<div class="col-md-1"></div>
+				
+				<div class="card col-md-5" id="cell">
+						<div>
+							<div class="row" id="block1"> 
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-7" id="tt">
+									<h1>JAVA</h1>
+								</div>
+
+							</div>
+							<div class="row" >
+								<img class="img1" src="java.png" alt="">
+								<p>
+										Le langage de programmation Java a été choisi par Google pour créer des applications Android. Les applications Android 
+
+										étant presque essentiellement codées en Java, <br> il vous faut connaitre ce langage comme une premiere pas pour entrer dans le monde de développement. 
+										
+										<br>
+											Vous pouvez télécharger le support de cours pour commencer a maitriser le langage java.								</p>
+							</div>
+
+						</div>
+						<br><br>
+						<button id="aze" type="button" class="btn btn-danger btn-sm">Télécharger gratuit!</button> 
+						<br><br>
+					</div>
+					<div class="col-md-1">
+						<p class="text-center" id="or">OR</p>
+					</div>
+					<div class="col-md-5" id="cell1">
+							<div>
+							<div class="row" id="block1"> 
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-7" id="tt">
+									<h1>Kotlin</h1>
+								</div>
+
+							</div>
+							<div class="row" >
+								<img class="img2" src="kotlin.png" alt="">
+								<p>
+										
+										Google annonce pendant la conférence Google I/O 2017 que Kotlin devient le second 
+										langage de programmation officiellement pris en charge par Android2 après Java.  <br>
+										Le 8 mai 2019 Kotlin devient officiellement le langage de programmation voulu et recommandé par le géant
+										américain Google pour le développement des applications Android3.
+										<br>
+											Vous pouvez télécharger le support de cours pour commencer a maitriser le langage java.								</p>
+							</div>
+
+						</div>
+						
+						<button id="aze" type="button" class="btn btn-danger btn-sm">Télécharger gratuit!</button> 
+						<br><br>
+					</div>
+				<div class="col-md-1"></div>
+			</div>
+			<br>
+			<br>
+    	</section>
+    	</div>
+    	
+    		<div class="well">
+    			<div class="container" id="experience">
+    					<div class="page-header" >
+    					<h2>Interfacage <small>le métalangage XML?</small></h2>
+    					</div>
+    				<section>
+							
+								<div class="row">
+										<div class="col-md-4">
+											</div>    			
+										
+									<div class="col-md-4" id="cell3">
+											<div>
+											<div class="row" id="block1"> 
+												<div class="col-md-4">
+												</div>
+												<div class="col-md-7" id="tt">
+													<h1>XML</h1>
+												</div>
+				
+											</div>
+											<div class="row" >
+												<img class="img3" src="xml.jpg" alt="">
+												<p>Le XML est un langage de balisage rassemble bien au HTML. À l'opposé d'un langage de programmation, La programmation des<br> interfaces graphiques en Android consiste à déclarer la composition de l'interface dans des fichiers XML. <br>  Ces déclarations sont ensuite transformées en objets 
+													tels que des fenêtres et des boutons globalement des vues, <br> qui peuvent être <br>  manipulés par de la programmation Java. <br> 
+													Vous pouvez télécharger le support de cours "XML pour android". <br><br>
+												</p>
+											</div>
+				
+										</div>
+	
+										<button id="aze" type="button" class="btn btn-danger btn-sm">Télécharger gratuit!</button> 
+										<br><div class="ad"></div>
+									</div>
+									<div class="col-md-4">
+										</div> 
+								</div>
+    				</section>
+    		</div>
+    		</div>
+
+    			<div class="container" id="competences">
+    					<div class="page-header" >
+    					<h2>L'Environement <small>outils necessaire</small></h2>
+    					</div>
+    				<section>
+		    				
+
+		    				<div class="row">
+		    					<div class="col-md-6">
+		    						<div class="panel panel-default">
+		    							<img id="imgg" class="pull-left" src="as.png">
+		    							<h4>Android Studio</h4>
+		    							<p class="text-justify">Android Studio est l’un des plus importants outils de développement Android. Il vous sera indispensable de savoir l’installer et l’utiliser pour créer des applications. <br> <br></p>
+										<button id="aze" class="btn btn-primary">Télécharger !</button> 
+
+									</div>
+								</div>
+								<br><br><br><br><br><br><br><br>
+		    					<div class="col-md-6">
+		    						<div class="panel panel-default">
+		    							<img id="imgg" class="pull-left" src="mm.png">
+		    							<h4>Emulateur</h4>
+		    							<p class="text-justify">
+												Où on va tester nos applications,Voila donc l'émulateur est un mobile virtual contenant l'android comme un SE, on utilise l'émulateur le plus fiable MEMU.<br></p>
+										<button id="azee" class="btn btn-primary">Télécharger !</button> <br>
+
+									</div>
+		    					</div>
+		    				
+		    		</section>
+    		</div>
+    		</div>
+
+    		<div class="container" id="album">
+    					<div class="page-header" >
+    					<h2>Et <small>ça?</small></h2>
+    					</div>
+    				<section>
+							<div class="row">
+								<div class="col-md-2"></div>
+								<div class="col-md-3">
+									<div class="card" style="width: 25rem; height: 20rem;">
+										<img src="logo/logo1.png" style="width: 15rem; height: 15rem;" class="card-img-top" alt="...">
+										
+										<div class="card-body">
+											<h3 class="card-text text-center" style="font-weight: bold;">Développement Web</h3>
+										</div>
+									  </div>
+								</div>
+								<div class="col-md-3"></div>
+								<div class="col-md-3">
+									<div class="card" style="width: 25rem; height: 20rem;">
+										<img src="logo/logo2.png" style="width: 15rem; height: 15rem;" class="card-img-top" alt="...">
+										<div class="card-body">
+										  <h3 class="card-text text-center" style="font-weight: bold;">Développement iOS</h3>
+										</div>
+									  </div>
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+    				</section>
+    		</div>
+    		</div>
+			<div class="container" id="contact">
+    					<div class="page-header" >
+    					<h2>Nous <small>sommes qui?</small></h2>
+    					</div>
+    				<section>
+    					<div class="row">
+    						<div class="col-md-4">
+    							<p>Envoyer moi un message ou contactez moi a l'adresse ci-dessous.</p>
+    							<p class="bold">Av ceinture Sousse</p>
+								<p>123,rue aze <br>house number 654 <br>TEL:0021622234528</p>
+								<p> Vous pouvez rendez nous sur</p>
+								<div>
+									<div style="margin-left: 40px; margin-top: 10px;" class="row">
+										<div class="col-md-3">
+											<img style="width: 64px; height: 64px;" src="logo/f.jpg" alt="">
+										</div>
+
+										<div class="col-md-3">
+												<img style="width: 64px; height: 64px;" src="logo/i.png" alt="">
+										</div>
+										
+										<div class="col-md-3">
+												<img style="width: 64px; height: 64px;" src="logo/it.png" alt="">
+										</div>
+										
+									</div>
+								</div>
+    						</div>
+    						<div class="col-md-8">
+    							<form class="form-horizontal">
+    								<div class="form-group">
+										 <label for="nom" class="col-md-3 control-label">Nom & prénom</label>
+										 <div class="col-md-9">
+										 	<input type="text" class="form-control" id="nom" placeholder="Votre nom & prénom">
+										 </div>
+									</div>
+									<div class="form-group">
+										 <label for="nom" class="col-md-3 control-label">E-mail (obligatoire)</label>
+										 <div class="col-md-9">
+										 	<input type="text" class="form-control" id="mail" placeholder="Votre adresse mail">
+										 </div>
+									</div>
+									<div class="form-group">
+										 <label for="nom" class="col-md-3 control-label">Message</label>
+										 <div class="col-md-9">
+										 	<textarea type="text" class="form-control" id="msg" placeholder="Message"></textarea>
+										 </div>
+									</div>
+									<div style="margin-left: 70px;" class="row">
+										<div class="col-md-3">
+										<p style="font-weight: bold;">Nouveautés</p>	
+										</div>
+										<div class="col-md-9">
+												<input type="checkbox" class="form-control" id="nv" placeholder=""></input>
+										</div>
+										<div style="margin-left: 70px;" class="row" id="sh">
+												<div class="col-md-3">
+												</div>
+												<div style="margin-left: 20px;"  class="col-md-9">
+														<input type="checkbox" id="chk"  > Android
+														<input type="checkbox" id="chk1"  > Web 
+														<input type="checkbox" id="chk2"  > iOS <br> <br> <br>
+												</div>
+									
+									</div>
+									<div class="form-group">
+										<div class="col-md-9 col-lg-push-3">
+											<button type="button" class="btn btn-primary" id="submit">Submit</button>
+											<br>
+											
+										</div>
+										
+									</div>
+										
+								</form>
+								<br>
+								<div class="rslt" >
+
+								</div><br>
+
+    						</div>
+    					</div>
+    				</section>
+    		</div>
+    		</div>
+    	
+    	
+    	
+	
+	<script type="text/javascript" src="dist/js/jquery.js"></script>
+	<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+</body>
+</html>

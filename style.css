@@ -1,0 +1,181 @@
+
+.progress {
+height: 35px;
+}
+.progress-bar {
+text-align: left;
+}
+.progress .competence{
+	font-size: 14px;
+	line-height: 35px;
+	margin-left: 20px;
+	font-weight: bold;
+}
+.progress .competence .valeur{
+	float: right;
+	margin-right: 20px;
+}
+.item img{
+	width: 100%;
+}
+.bold{
+	font-weight: bold;
+}
+.img-circle{
+	height: 64px;
+	width: 50px;
+}
+.jumbotron{
+	height: 100vh;
+	background-image: linear-gradient(rgba(197, 197, 197, 0.5),rgba(0, 0, 0, 0.6)), url("app.jpg");
+	background-size: cover;
+}
+.btn-group{
+	margin-top: 40px;
+}
+.first-title{
+	margin-top: 150px;
+
+}
+#aze{
+	float: right;
+}
+#azee{
+	margin-top: 20px;
+	float: right;
+}
+#img-java{
+	height: 250px;
+	width: 400px;
+}
+#imgg{
+	height: 120px;
+	width: 120px;
+}
+#intro div h1{
+	font-weight: bold;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	word-spacing: 0.1cm;
+	color: honeydew;
+}
+#intro div p{
+	margin-top: 10px;
+	font-size:14px;
+	font-weight: bold;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	word-spacing: 0.1cm;
+	color: honeydew;
+}
+#block1{
+	background-color: rgba(99, 99, 99, 0.123);
+	border-radius: 15px;
+}
+.img1{
+	height: 70px;
+	width: 50px;
+	margin: 15px;
+	float: right;
+}
+.img2{
+	height: 70px;
+	width: 70px;
+	margin: 15px;
+	float: right;
+}
+#tt h1{
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 5%;
+	float: right;
+	margin-right: 3px ;
+}
+
+#cell p{
+	text-justify: auto;
+	margin: 9px;
+	word-spacing: 1mm;
+}
+#cell1 p{
+	text-justify: auto;
+	margin: 9px;
+	word-spacing: 1mm;
+
+}
+#cell{
+	background-color: rgba(223, 222, 222, 0.123);
+	border-radius: 15px;
+	width: 400px;
+	height: 320px;
+
+}
+#cell1{
+	background-color: rgba(223, 222, 222, 0.123);
+	border-radius: 15px;
+	width: 400px;
+	height: 320px;
+}
+
+#or{
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+}
+#cell3{
+	background-color: rgba(255, 255, 255, 0.801);
+	border-radius: 15px;
+	width: 400px;
+	height: 415px;
+}
+#cell3 p{
+	text-justify: auto;
+	margin: 9px;
+	word-spacing: 1mm;
+	
+}
+#block1{
+	background-color: rgba(241, 238, 238, 0.842);
+	border-radius: 15px;
+}
+.img3{
+	height: 100px;
+	width: 80px;
+	margin: 25px;
+	float: right;
+}
+body{
+	margin: 0px;
+}
+.carousel-page{
+	width:100%;
+	height:400px;
+	background-color:#5f666d;
+	color:white;
+	}
+.logo-footer{
+	float: right;
+}
+.and{
+	font-size: 18px;
+	font-weight: bold;
+	color: grey;
+}
+.card{
+	width: 120%;
+	border-radius: 15px;
+	background-color: rgba(97, 95, 95, 0.527);
+
+}
+.card-img-top{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width: 90px;
+	height: 90px;
+}
+
+.card:hover{
+	width: 120%;
+	background-color: rgb(212, 212, 208);
+	border-radius: 15px;
+	color: rgb(49, 48, 48);
+}
